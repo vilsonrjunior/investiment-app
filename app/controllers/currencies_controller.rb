@@ -1,5 +1,4 @@
 class CurrenciesController < ApplicationController
-
   def index
   end
 
@@ -8,7 +7,8 @@ class CurrenciesController < ApplicationController
     render json: { currencies: @currencies }
   end
 
-  #takes in currency id and amount owned and returns final calculation
+  # Takes in the currency id and the amount owned
+  # Returns final calculations
   def calculate
     amount = params[:amount]
     render json: {
@@ -19,11 +19,9 @@ class CurrenciesController < ApplicationController
     }
   end
 
-   private
+  private
 
-   def currency
+  def currency
     @currency ||= Currency.find(params[:id])
-   end
-
+  end
 end
-
