@@ -3,6 +3,7 @@ import Search from '../components/Search'
 import Calculate from '../components/Calculate'
 //axios was installed to assist with post requests
 import axios from 'axios'
+import Portfolio from './Portfolio'
 
 class PortfolioContainer extends Component {
   constructor(props){
@@ -112,7 +113,12 @@ class PortfolioContainer extends Component {
 
     return(
       <div>
-        {searchOrCalculate}
+        <div>
+          {searchOrCalculate}
+        </div>
+        <div>
+          <Portfolio portfolio={this.state.portfolio}/>
+        </div>
       </div>
     )
   }
