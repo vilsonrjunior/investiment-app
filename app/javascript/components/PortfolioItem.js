@@ -23,9 +23,16 @@ import React, { Component } from 'react'
             <div className="header">Current value:</div>
             <div className="text">${props.item.value}</div>
           </div>
+
+          <div className="col">
+            <div className="header">Icon</div>
+            <div className="image">{props.item.logo}</div>
+          </div>
         </div>
       </div>
       )
+
+      console.log(props.item.logo)
 }
 
 export default PortfolioItem

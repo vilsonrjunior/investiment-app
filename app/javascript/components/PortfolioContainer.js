@@ -112,11 +112,11 @@ class PortfolioContainer extends Component {
       handleChange={this.handleChange} />
 
     return(
-      <div>
-        <div>
+      <div className="grid">
+        <div className="left">
           {searchOrCalculate}
         </div>
-        <div>
+        <div className="right">
           <Portfolio portfolio={this.state.portfolio}/>
         </div>
       </div>
